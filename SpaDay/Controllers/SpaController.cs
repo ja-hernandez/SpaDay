@@ -46,6 +46,8 @@ namespace SpaDay.Controllers
             {
                 "Microdermabrasion", "Hydrofacial", "Rejuvenating", "Enzyme Peel"
             };
+            
+
 
             List<string> appropriateFacials = new List<string>();
             for (int i = 0; i < facials.Count; i++)
@@ -55,6 +57,12 @@ namespace SpaDay.Controllers
                     appropriateFacials.Add(facials[i]);
                 }
             }
+
+            ViewBag.name = name;
+            ViewBag.skintype = skintype;
+            ViewBag.appropriateFacials = appropriateFacials;
+            ViewBag.manipedi = manipedi;
+
             return View();
         }
 
